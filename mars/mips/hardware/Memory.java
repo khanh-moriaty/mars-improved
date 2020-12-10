@@ -148,7 +148,7 @@ public class Memory extends Observable {
 	// bytes of space available without going indirect.
 
 	private static final int BLOCK_LENGTH_WORDS = 1024;  // allocated blocksize 1024 ints == 4K bytes
-	private static final int BLOCK_TABLE_LENGTH = 1024; // Each entry of table points to a block.
+	private static final int BLOCK_TABLE_LENGTH = 1024*256; // Each entry of table points to a block.
 	private int[][] dataBlockTable;
 	private int[][] kernelDataBlockTable;
 
@@ -189,7 +189,7 @@ public class Memory extends Observable {
 	// references to ProgramStatement objects.
 
 	private static final int TEXT_BLOCK_LENGTH_WORDS = 1024;  // allocated blocksize 1024 ints == 4K bytes
-	private static final int TEXT_BLOCK_TABLE_LENGTH = 1024*256; // Each entry of table points to a block.
+	private static final int TEXT_BLOCK_TABLE_LENGTH = 1024; // Each entry of table points to a block.
 	private ProgramStatement[][] textBlockTable;
 	private ProgramStatement[][] kernelTextBlockTable;
 
