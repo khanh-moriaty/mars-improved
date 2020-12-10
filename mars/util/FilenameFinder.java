@@ -106,7 +106,7 @@ public class FilenameFinder {
 				if (uri.toString().indexOf(JAR_URI_PREFIX) == 0) {
 					uri = new URI(uri.toString().substring(JAR_URI_PREFIX.length()));
 				}
-
+				
 				final File f = new File(uri.getPath());
 				final File[] files = f.listFiles();
 				if (files == null) {
@@ -114,7 +114,7 @@ public class FilenameFinder {
 						// Must be running from a JAR file. Use ZipFile to find files and create list.
 						// Modified 12/28/09 by DPS to add results to existing filenameList instead of overwriting it.
 						filenameList.addAll(getListFromJar(extractJarFilename(f.toString()), directoryPath,
-								fileExtension));
+						fileExtension));
 					}
 				} else {  // have array of File objects; convert to names and add to list
 					final FileFilter filter = getFileFilter(fileExtension, "", NO_DIRECTORIES);

@@ -30,7 +30,6 @@ import mars.mips.hardware.MemoryAccessNotice;
 */
 
 /*
- * Didier Teifreto LIFC Université de franche-Comté www.lifc.univ-fcomte.fr/~teifreto
  * didier.teifreto@univ-fcomte.fr
  */
 public class DigitalLabSim extends AbstractMarsToolAndApplication {
